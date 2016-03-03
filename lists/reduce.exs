@@ -36,4 +36,11 @@ defmodule MyList do
       [(head + n) | ceasar(tail, n)]
     end
   end
+
+  # Exercise: ListsAndRecursion 4
+  # Return a list of numbers from 'from' up to 'to'
+  def span(from, t), when from > to do: []
+  def span(from, to) do
+    [from | span(from + 1, to) ]
+  end
 end
